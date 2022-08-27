@@ -1,0 +1,35 @@
+[
+    {
+        "model": "sleighmeapi.group",
+        "pk": 1,
+        "fields": {
+            "name": "Group 1",
+            "creator": 1,
+            "guidelines": "Fill out your profiles.",
+            "date": "2022-12-12",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "sleighmeapi.group",
+        "pk": 2,
+        "fields": {
+            "name": "Group 2",
+            "creator": 2,
+            "guidelines": "Be nice, not naughty.",
+            "date": "2022-12-13",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "sleighmeapi.group",
+        "pk": 3,
+        "fields": {
+            "name": "Group 3",
+            "creator": 2,
+            "guidelines": "We'll do in-person gift exchange at Al's house.",
+            "date": "2022-12-14",
+            "time": "20:00:00"
+        }
+    }
+]

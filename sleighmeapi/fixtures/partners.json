@@ -1,0 +1,29 @@
+[
+    {
+        "model": "sleighmeapi.partner",
+        "pk": 1,
+        "fields": {
+            "giver": 1,
+            "receiver": 2,
+            "group": 1
+        }
+    },
+    {
+        "model": "sleighmeapi.partner",
+        "pk": 2,
+        "fields": {
+            "giver": 3,
+            "receiver": 4,
+            "group": 1
+        }
+    },
+    {
+        "model": "sleighmeapi.partner",
+        "pk": 3,
+        "fields": {
+            "giver": 1,
+            "receiver": 4,
+            "group": 2
+        }
+    }
+]

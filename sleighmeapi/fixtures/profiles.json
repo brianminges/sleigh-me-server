@@ -1,0 +1,132 @@
+[
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 1,
+        "fields": {
+            "likes": "makeup, cookware",
+            "dislikes": "sports",
+            "gift_preference": 1,
+            "street": "123 Main Street",
+            "city": "Anytown",
+            "state": 1,
+            "zip": "12345"
+        }
+    },
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 2,
+        "fields": {
+            "likes": "fooball, soccer, baseball",
+            "dislikes": "clothes",
+            "gift_preference": 1,
+            "street": "123 Main Street",
+            "city": "Anytown",
+            "state": 1,
+            "zip": "12345"
+        }
+    },
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 3,
+        "fields": {
+            "likes": "books, books and books!",
+            "dislikes": "anything with animal prints",
+            "gift_preference": 2,
+            "street": "123 Main Street",
+            "city": "Anytown",
+            "state": 1,
+            "zip": "12345"
+        }
+    },
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 4,
+        "fields": {
+            "likes": "",
+            "dislikes": "",
+            "gift_preference": 1,
+            "street": "",
+            "city": "",
+            "state": 1,
+            "zip": ""
+        }
+    },
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 5,
+        "fields": {
+            "likes": "",
+            "dislikes": "",
+            "gift_preference": 1,
+            "street": "",
+            "city": "",
+            "state": 1,
+            "zip": ""
+        }
+    },
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 6,
+        "fields": {
+            "likes": "",
+            "dislikes": "",
+            "gift_preference": 1,
+            "street": "",
+            "city": "",
+            "state": 1,
+            "zip": ""
+        }
+    },
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 7,
+        "fields": {
+            "likes": "",
+            "dislikes": "",
+            "gift_preference": 1,
+            "street": "",
+            "city": "",
+            "state": 1,
+            "zip": ""
+        }
+    },
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 8,
+        "fields": {
+            "likes": "",
+            "dislikes": "",
+            "gift_preference": 1,
+            "street": "",
+            "city": "",
+            "state": 1,
+            "zip": ""
+        }
+    },
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 9,
+        "fields": {
+            "likes": "",
+            "dislikes": "",
+            "gift_preference": 1,
+            "street": "",
+            "city": "",
+            "state": 1,
+            "zip": ""
+        }
+    },
+    {
+        "model": "sleighmeapi.profile",
+        "pk": 10,
+        "fields": {
+            "likes": "",
+            "dislikes": "",
+            "gift_preference": 1,
+            "street": "",
+            "city": "",
+            "state": 1,
+            "zip": ""
+        }
+    }
+]

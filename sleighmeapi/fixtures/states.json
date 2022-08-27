@@ -1,0 +1,404 @@
+[
+    {
+        "model": "sleighmeapi.state",
+        "pk": 1,
+        "fields": {
+            "name": "Alabama",
+            "abbreviation": "AL"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 2,
+        "fields": {
+            "name": "Alaska",
+            "abbreviation": "AK"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 3,
+        "fields": {
+            "name": "Arizona",
+            "abbreviation": "AZ"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 4,
+        "fields": {
+            "name": "Arkansas",
+            "abbreviation": "AR"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 5,
+        "fields": {
+            "name": "California",
+            "abbreviation": "CA"
+            
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 6,
+        "fields": {
+            "name": "Colorado",
+            "abbreviation": "CO"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 7,
+        "fields": {
+            "name": "Connecticut",
+            "abbreviation": "CT"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 8,
+        "fields": {
+            "name": "Delaware",
+            "abbreviation": "DE"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 9,
+        "fields": {
+            "name": "Florida",
+            "abbreviation": "FL"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 10,
+        "fields": {
+            "name": "Georgia",
+            "abbreviation": "GA"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 11,
+        "fields": {
+            "name": "Hawaii",
+            "abbreviation": "HI"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 12,
+        "fields": {
+            "name": "Idaho",
+            "abbreviation": "ID"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 13,
+        "fields": {
+            "name": "Illinois",
+            "abbreviation": "IL"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 14,
+        "fields": {
+            "name": "Indiana",
+            "abbreviation": "IN"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 15,
+        "fields": {
+            "name": "Iowa",
+            "abbreviation": "IA"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 16,
+        "fields": {
+            "name": "Kansas",
+            "abbreviation": "KS"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 17,
+        "fields": {
+            "name": "Kentucky",
+            "abbreviation": "KY"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 18,
+        "fields": {
+            "name": "Louisiana",
+            "abbreviation": "LA"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 19,
+        "fields": {
+            "name": "Maine",
+            "abbreviation": "ME"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 20,
+        "fields": {
+            "name": "Maryland",
+            "abbreviation": "MD"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 21,
+        "fields": {
+            "name": "Massachusetts",
+            "abbreviation": "MA"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 22,
+        "fields": {
+            "name": "Michigan",
+            "abbreviation": "MI"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 23,
+        "fields": {
+            "name": "Minnesota",
+            "abbreviation": "MN"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 24,
+        "fields": {
+            "name": "Mississippi",
+            "abbreviation": "MS"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 25,
+        "fields": {
+            "name": "Missouri",
+            "abbreviation": "MZ"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 26,
+        "fields": {
+            "name": "Montana",
+            "abbreviation": "MT"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 27,
+        "fields": {
+            "name": "Nebraska",
+            "abbreviation": "NE"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 28,
+        "fields": {
+            "name": "Nevada",
+            "abbreviation": "NV"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 29,
+        "fields": {
+            "name": "New Hampshire",
+            "abbreviation": "NH"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 30,
+        "fields": {
+            "name": "New Jersey",
+            "abbreviation": "NJ"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 31,
+        "fields": {
+            "name": "New Mexico",
+            "abbreviation": "NM"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 32,
+        "fields": {
+            "name": "New York",
+            "abbreviation": "NM"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 33,
+        "fields": {
+            "name": "North Carolina",
+            "abbreviation": "NC"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 34,
+        "fields": {
+            "name": "North Dakota",
+            "abbreviation": "ND"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 35,
+        "fields": {
+            "name": "Ohio",
+            "abbreviation": "OH"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 36,
+        "fields": {
+            "name": "Oklahoma",
+            "abbreviation": "OK"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 37,
+        "fields": {
+            "name": "Oregon",
+            "abbreviation": "OR"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 38,
+        "fields": {
+            "name": "Pennsylvania",
+            "abbreviation": "PA"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 39,
+        "fields": {
+            "name": "Rhode Island",
+            "abbreviation": "RI"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 40,
+        "fields": {
+            "name": "South Carolina",
+            "abbreviation": "SC"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 41,
+        "fields": {
+            "name": "South Dakota",
+            "abbreviation": "SD"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 42,
+        "fields": {
+            "name": "Tennessee",
+            "abbreviation": "TN"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 43,
+        "fields": {
+            "name": "Texas",
+            "abbreviation": "TX"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 44,
+        "fields": {
+            "name": "Utah",
+            "abbreviation": "UT"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 45,
+        "fields": {
+            "name": "Vermont",
+            "abbreviation": "VT"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 46,
+        "fields": {
+            "name": "Virginia",
+            "abbreviation": "VA"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 47,
+        "fields": {
+            "name": "Washington",
+            "abbreviation": "WA"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 48,
+        "fields": {
+            "name": "West Virginia",
+            "abbreviation": "WV"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 49,
+        "fields": {
+            "name": "Wisconsin",
+            "abbreviation": "WI"
+        }
+    },
+    {
+        "model": "sleighmeapi.state",
+        "pk": 50,
+        "fields": {
+            "name": "Wyoming",
+            "abbreviation": "WY"
+        }
+    }
+
+]
