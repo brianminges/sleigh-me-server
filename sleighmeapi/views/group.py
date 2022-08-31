@@ -67,7 +67,8 @@ class GroupSerializer(serializers.ModelSerializer):
             'creator',
             'guidelines',
             'date',
-            'time'
+            'time',
+            'members'
             )
         depth = 2
 
