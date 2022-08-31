@@ -6,3 +6,4 @@ class Group(models.Model):
     guidelines = models.CharField(max_length=150)
     date = models.DateField()
     time = models.TimeField()
+    spend = models.DecimalField(max_digits=7, decimal_places=2, default=0)

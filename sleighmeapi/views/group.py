@@ -49,7 +49,8 @@ class GroupView(ViewSet):
             name = request.data["name"],
             guidelines = request.data["guidelines"],
             date = request.data["date"],
-            time = request.data["time"]
+            time = request.data["time"],
+            spend = request.data["spend"]
         )
         serializer = CreateGroupSerializer(group)
         # serializer.is_valid(raise_exception=True)
@@ -68,6 +69,7 @@ class GroupSerializer(serializers.ModelSerializer):
             'guidelines',
             'date',
             'time',
+            'spend',
             'members'
             )
         depth = 2
@@ -82,5 +84,6 @@ class CreateGroupSerializer(serializers.ModelSerializer):
             'creator',
             'guidelines',
             'date',
-            'time'
+            'time',
+            'spend'
         )
