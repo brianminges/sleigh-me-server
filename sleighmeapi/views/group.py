@@ -6,6 +6,7 @@ from rest_framework import serializers, status
 from django.core.exceptions import ValidationError
 from rest_framework.decorators import action
 from sleighmeapi.models.group import Group
+from sleighmeapi.models.member import Member
 from django.contrib.auth.models import User
 
 class GroupView(ViewSet):
@@ -36,6 +37,25 @@ class GroupView(ViewSet):
         serializer = GroupSerializer(groups, many=True)
         return Response(serializer.data)
     
+    def create(self, request):
+        """Handle POST operations
+        
+        Returns:
+            Response -- JSON serialized game instance
+        """
+        creator = Member.objects.get(user=request.auth.user)
+        group = Group.objects.create(
+            creator = creator,
+            name = request.data["name"],
+            guidelines = request.data["guidelines"],
+            date = request.data["date"],
+            time = request.data["time"]
+        )
+        serializer = CreateGroupSerializer(group)
+        # serializer.is_valid(raise_exception=True)
+        # serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
  
 class GroupSerializer(serializers.ModelSerializer):
     
@@ -50,3 +70,16 @@ class GroupSerializer(serializers.ModelSerializer):
             'time'
             )
         depth = 2
+
+
+class CreateGroupSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Group
+        fields = (
+            'id',
+            'name',
+            'creator',
+            'guidelines',
+            'date',
+            'time'
+        )
