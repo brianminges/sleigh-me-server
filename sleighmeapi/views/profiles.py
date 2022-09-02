@@ -31,7 +31,7 @@ class ProfileView(ViewSet):
         """Handle PUT operations
         
         Returns
-            Response -- JSON serialized profile instance
+            Response -- Empty body with 204 status code
         """
         profile = Profile.objects.get(pk=pk)
         gift_preference = GiftPreference.objects.get(pk=request.data["gift_preference"])

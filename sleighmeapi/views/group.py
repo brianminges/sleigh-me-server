@@ -53,9 +53,25 @@ class GroupView(ViewSet):
             spend = request.data["spend"]
         )
         serializer = CreateGroupSerializer(group)
-        # serializer.is_valid(raise_exception=True)
-        # serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    def update(self, request, pk):
+        """Handle PUT requests for a group
+        
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        
+        group = Group.objects.get(pk=pk)
+        creator = Member.objects.get(pk=request.data["creator"])
+        group.name = request.data["name"]
+        group.creator = creator
+        group.guidelines = request.data["guidelines"]
+        group.date = request.data["date"]
+        group.time = request.data["time"]
+        group.spend = request.data["spend"]
+        group.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
     
  
 class GroupSerializer(serializers.ModelSerializer):
