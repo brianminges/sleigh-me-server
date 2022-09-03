@@ -92,10 +92,9 @@ class GroupView(ViewSet):
     @action(methods=['delete'], detail=True)
     def leave(self, request, pk):
         """Delete request of a user to leave a group"""
-        user = request.auth.user
-        # member = request.data['user']
+        member = Member.objects.get(user=request.auth.user)
         group = Group.objects.get(pk=pk)
-        group.members.remove(user)
+        group.members.remove(member)
         return Response({'message': 'User removed'}, status=status.HTTP_204_NO_CONTENT)
     
  
