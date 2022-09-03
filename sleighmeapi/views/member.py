@@ -5,6 +5,8 @@ from rest_framework import serializers, status
 from rest_framework.decorators import action
 from django.core.exceptions import ValidationError
 from sleighmeapi.models import Member
+from django.contrib.auth.models import User
+from django.db.models import Q
 
 class MemberView(ViewSet):
     """Sleigh Me members views"""
@@ -31,6 +33,15 @@ class MemberView(ViewSet):
         """
         
         members = Member.objects.all()
+        # Searches member names based on user's query
+        search_name = self.request.query_params.get('q', None)
+        if search_name is not None:
+            members = User.objects.filter(
+                Q(last_name__contains=search_name) |
+                Q(first_name__contains=search_name)
+            )
+            serializer = MemberSearchSerializer(members, many=True)
+            return Response(serializer.data)
         serializer = MemberSerializer(members, many=True)
         return Response(serializer.data)
 
@@ -46,3 +57,12 @@ class MemberSerializer(serializers.ModelSerializer):
             )
         depth = 6
         
+class MemberSearchSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = (
+            'id',
+            'first_name',
+            'last_name',
+            'username'
+        )
