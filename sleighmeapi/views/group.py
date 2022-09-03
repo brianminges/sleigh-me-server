@@ -53,6 +53,7 @@ class GroupView(ViewSet):
             time = request.data["time"],
             spend = request.data["spend"]
         )
+        group.members.add(creator)
         serializer = CreateGroupSerializer(group)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
@@ -74,6 +75,30 @@ class GroupView(ViewSet):
         group.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
+    def destroy(self, request, pk):
+        """Handle DELETE requests for a group"""
+        group = Group.objects.get(pk=pk)
+        group.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+    @action(methods=['post'], detail=True)
+    def join_group(self, request, pk):
+        """Post request to add a member to a group"""
+        group = Group.objects.get(pk=pk)
+        member = request.data['member']
+        group.members.add(member) 
+        return Response({'message': 'User added'}, status=status.HTTP_201_CREATED)
+    
+    @action(methods=['delete'], detail=True)
+    def leave(self, request, pk):
+        """Delete request of a user to leave a group"""
+        user = request.auth.user
+        # member = request.data['user']
+        group = Group.objects.get(pk=pk)
+        group.members.remove(user)
+        return Response({'message': 'User removed'}, status=status.HTTP_204_NO_CONTENT)
+    
+ 
  
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:

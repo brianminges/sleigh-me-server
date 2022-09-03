@@ -10,6 +10,7 @@ from sleighmeapi.views.profiles import ProfileView
 from sleighmeapi.views.states import StateView
 from sleighmeapi.views.user import UserView
 
+
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'groups', GroupView, 'group')
 router.register(r'users', UserView, 'user')
