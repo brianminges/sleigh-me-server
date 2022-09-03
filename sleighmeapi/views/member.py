@@ -64,5 +64,7 @@ class MemberSearchSerializer(serializers.ModelSerializer):
             'id',
             'first_name',
             'last_name',
-            'username'
+            'username',
+            'member'
         )
+        depth = 2
