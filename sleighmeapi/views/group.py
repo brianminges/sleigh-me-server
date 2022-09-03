@@ -9,6 +9,7 @@ from sleighmeapi.models.group import Group
 from sleighmeapi.models.member import Member
 from django.contrib.auth.models import User
 
+
 class GroupView(ViewSet):
     """Sleigh Me group views"""
     
