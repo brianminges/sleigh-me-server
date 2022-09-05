@@ -5,6 +5,7 @@ from rest_framework import serializers, status
 from rest_framework.decorators import action
 from django.core.exceptions import ValidationError
 from sleighmeapi.models import Member
+from sleighmeapi.models import Group
 from django.contrib.auth.models import User
 from django.db.models import Q
 
@@ -44,8 +45,8 @@ class MemberView(ViewSet):
             return Response(serializer.data)
         serializer = MemberSerializer(members, many=True)
         return Response(serializer.data)
-
-
+           
+ 
 class MemberSerializer(serializers.ModelSerializer):
     class Meta:
         model = Member

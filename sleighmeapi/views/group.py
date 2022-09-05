@@ -8,6 +8,7 @@ from rest_framework.decorators import action
 from sleighmeapi.models.group import Group
 from sleighmeapi.models.member import Member
 from django.contrib.auth.models import User
+from sleighmeapi.views.member import MemberSerializer
 
 
 class GroupView(ViewSet):
@@ -53,6 +54,7 @@ class GroupView(ViewSet):
             time = request.data["time"],
             spend = request.data["spend"]
         )
+        # Makes creator of group a member of it upon creation
         group.members.add(creator)
         serializer = CreateGroupSerializer(group)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -97,8 +99,7 @@ class GroupView(ViewSet):
         group.members.remove(member)
         return Response({'message': 'User removed'}, status=status.HTTP_204_NO_CONTENT)
     
- 
- 
+
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
