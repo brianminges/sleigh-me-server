@@ -9,6 +9,7 @@ from sleighmeapi.views.member import MemberView
 from sleighmeapi.views.profiles import ProfileView
 from sleighmeapi.views.states import StateView
 from sleighmeapi.views.user import UserView
+from sleighmeapi.views.partner import PartnerView
 
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -18,6 +19,7 @@ router.register(r'members', MemberView, 'member')
 router.register(r'profiles', ProfileView, 'profiles')
 router.register(r'gift_preferences', GiftPreferenceView, 'gift_preference')
 router.register(r'states', StateView, 'state')
+router.register(r'partners', PartnerView, 'partner')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
