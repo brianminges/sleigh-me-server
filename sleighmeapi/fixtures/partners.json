@@ -12,8 +12,8 @@
         "model": "sleighmeapi.partner",
         "pk": 2,
         "fields": {
-            "giver": 3,
-            "receiver": 4,
+            "giver": 2,
+            "receiver": 3,
             "group": 1
         }
     },
@@ -21,9 +21,9 @@
         "model": "sleighmeapi.partner",
         "pk": 3,
         "fields": {
-            "giver": 1,
-            "receiver": 4,
-            "group": 2
+            "giver": 3,
+            "receiver": 1,
+            "group": 1
         }
-    }
+    } 
 ]
