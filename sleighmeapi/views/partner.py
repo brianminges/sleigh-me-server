@@ -51,7 +51,8 @@ class PartnerView(ViewSet):
         )
         serializer = CreatePartnerSerializer(partner)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-  
+    
+      
 class PartnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Partner
@@ -61,7 +62,7 @@ class PartnerSerializer(serializers.ModelSerializer):
             'receiver',
             'group'
         )
-        depth = 1
+        depth = 2
         
 class CreatePartnerSerializer(serializers.ModelSerializer):
     class Meta:
