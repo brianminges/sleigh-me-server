@@ -7,8 +7,10 @@ from django.core.exceptions import ValidationError
 from rest_framework.decorators import action
 from sleighmeapi.models.group import Group
 from sleighmeapi.models.member import Member
+from sleighmeapi.models.partner import Partner
 from django.contrib.auth.models import User
 from sleighmeapi.views.member import MemberSerializer
+from sleighmeapi.views.partner import PartnerSerializer
 
 
 class GroupView(ViewSet):
@@ -99,6 +101,14 @@ class GroupView(ViewSet):
         group.members.remove(member)
         return Response({'message': 'User removed'}, status=status.HTTP_204_NO_CONTENT)
     
+    @action(methods=['get'], detail=True)
+    def partner_alert(self, request, pk):
+        """ Gets user's partner pairing """
+        group = Group.objects.get(pk=pk)
+        giver = Member.objects.get(user=request.auth.user)
+        partner = Partner.objects.get(giver_id=giver.id, group_id=group.id)
+        serializer = PartnerSerializer(partner)
+        return Response(serializer.data)
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
