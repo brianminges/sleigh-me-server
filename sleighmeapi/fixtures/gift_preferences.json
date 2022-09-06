@@ -3,21 +3,21 @@
         "model": "sleighmeapi.giftPreference",
         "pk": 1,
         "fields": {
-            "option": "gift"
+            "option": "Gift"
         }
     },
     {
         "model": "sleighmeapi.giftPreference",
         "pk": 2,
         "fields": {
-            "option": "gift certificate"
+            "option": "Gift certificate"
         }
     },
     {
         "model": "sleighmeapi.giftPreference",
         "pk": 3,
         "fields": {
-            "option": "donation in my name"
+            "option": "Donation in my name"
         }
     }
 ]

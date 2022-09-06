@@ -5,6 +5,11 @@ from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
+from sleighmeapi.models.member import Member
+from sleighmeapi.models.profile import Profile
+from sleighmeapi.models.group import Group
+from django.db import models
+
 
 # from sleighme.models import Member
 
@@ -48,15 +53,15 @@ def register_user(request):
 
     # Create a new user by invoking the `create_user` helper method
     # on Django's built-in User model
+    
     new_user = User.objects.create_user(
         username=request.data['username'],
         password=request.data['password'],
         first_name=request.data['first_name'],
         last_name=request.data['last_name'],
-        
     )
-
-
+    
+   
     # Use the REST Framework's token generator on the new user account
     token = Token.objects.create(user=new_user)
     # Return the token to the client

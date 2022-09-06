@@ -25,7 +25,7 @@ class PartnerView(ViewSet):
             serializer = PartnerSerializer(partner)
             return Response(serializer.data)
         except Partner.DoesNotExist as ex:
-            return Response({'message': ex.art[0]}, status=status.HTTP_404_NOT_FOUND)
+            return Response({'message': ex.arg[0]}, status=status.HTTP_404_NOT_FOUND)
         
     def list(self, request):
         """Handle GET requests to get all partner pairings

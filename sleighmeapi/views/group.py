@@ -104,11 +104,16 @@ class GroupView(ViewSet):
     @action(methods=['get'], detail=True)
     def partner_alert(self, request, pk):
         """ Gets user's partner pairing """
-        group = Group.objects.get(pk=pk)
-        giver = Member.objects.get(user=request.auth.user)
-        partner = Partner.objects.get(giver_id=giver.id, group_id=group.id)
-        serializer = PartnerSerializer(partner)
-        return Response(serializer.data)
+        try: 
+            group = Group.objects.get(pk=pk)
+            giver = Member.objects.get(user=request.auth.user)
+            partner = Partner.objects.get(giver_id=giver.id, group_id=group.id)
+            serializer = PartnerSerializer(partner)
+            return Response(serializer.data)
+        except Partner.DoesNotExist as ex:
+            return Response({'message': ex.arg[0]}, status=status.HTTP_404_NOT_FOUND)
+  
+    
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
@@ -121,9 +126,10 @@ class GroupSerializer(serializers.ModelSerializer):
             'date',
             'time',
             'spend',
-            'members'
-            )
-        depth = 2
+            'members',
+            'partners'
+        )
+        depth = 3
 
 
 class CreateGroupSerializer(serializers.ModelSerializer):
