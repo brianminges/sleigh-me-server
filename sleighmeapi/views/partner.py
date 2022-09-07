@@ -52,6 +52,14 @@ class PartnerView(ViewSet):
         serializer = CreatePartnerSerializer(partner)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
+    @action(methods=['get'], detail=False)
+    def partner_by_giver(self, request):
+        """Gets all of current user's partners"""
+        giver = request.auth.user
+        partners = Partner.objects.filter(giver_id=giver.id)
+        serializer = PartnerSerializer(partners, many=True)
+        return Response(serializer.data)
+    
       
 class PartnerSerializer(serializers.ModelSerializer):
     class Meta:

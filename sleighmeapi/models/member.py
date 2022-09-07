@@ -5,5 +5,5 @@ from sleighmeapi.models.profile import Profile
 
 class Member(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="member")
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="member", null=True)
     groups = models.ManyToManyField(Group, related_name="members")
