@@ -52,12 +52,12 @@ class PartnerView(ViewSet):
         serializer = CreatePartnerSerializer(partner)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
-    @action(methods=['get'], detail=False)
-    def partner_by_giver(self, request):
+    @action(methods=['get'], detail=True)
+    def partner_by_giver(self, request, pk):
         """Gets all of current user's partners"""
-        giver = request.auth.user
+        giver = Member.objects.get(pk=pk)
         partners = Partner.objects.filter(giver_id=giver.id)
-        serializer = PartnerSerializer(partners, many=True)
+        serializer = MemberPartnerSerializer(partners, many=True)
         return Response(serializer.data)
     
       
@@ -71,6 +71,16 @@ class PartnerSerializer(serializers.ModelSerializer):
             'group'
         )
         depth = 2
+        
+class MemberPartnerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Partner
+        fields = (
+            'id',
+            'giver',
+            'receiver',
+            'group'
+        )     
         
 class CreatePartnerSerializer(serializers.ModelSerializer):
     class Meta:
