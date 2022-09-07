@@ -5,8 +5,8 @@ from sleighmeapi.models.gift_preference import GiftPreference
 class Profile(models.Model):
     likes = models.CharField(max_length=150)
     dislikes = models.CharField(max_length=150)
-    gift_preference = models.ForeignKey(GiftPreference, on_delete=models.CASCADE)
+    gift_preference = models.ForeignKey(GiftPreference, on_delete=models.CASCADE, null=True)
     street = models.CharField(max_length=100)
     city = models.CharField(max_length=20)
-    state = models.ForeignKey(State, on_delete=models.CASCADE)
+    state = models.ForeignKey(State, on_delete=models.CASCADE, null=True)
     zip = models.CharField(max_length=15)

@@ -7,8 +7,10 @@ from django.core.exceptions import ValidationError
 from rest_framework.decorators import action
 from django.contrib.auth.models import User
 from sleighmeapi.models.gift_preference import GiftPreference
+from sleighmeapi.models.partner import Partner
 from sleighmeapi.models.state import State
 from sleighmeapi.models.profile import Profile
+from sleighmeapi.views.partner import PartnerSerializer
 
 class ProfileView(ViewSet):
     """Sleigh Me profile views"""
@@ -46,6 +48,8 @@ class ProfileView(ViewSet):
         profile.zip = request.data["zip"]
         profile.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+
         
        
 class ProfileSerializer(serializers.ModelSerializer):
