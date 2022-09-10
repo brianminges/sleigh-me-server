@@ -60,6 +60,14 @@ class PartnerView(ViewSet):
         serializer = MemberPartnerSerializer(partners, many=True)
         return Response(serializer.data)
     
+    def destroy(self, request, pk):
+        """Handle DELETE requests for a partnership"""
+        partner = Partner.objects.get(pk=pk)
+        # Finds all partners with same group id
+        partner = Partner.objects.filter(pk=request.data['group'])
+        partner.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
       
 class PartnerSerializer(serializers.ModelSerializer):
     class Meta:
