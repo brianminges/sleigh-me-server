@@ -9,7 +9,6 @@ from sleighmeapi.models.group import Group
 from sleighmeapi.models.member import Member
 from sleighmeapi.models.partner import Partner
 from django.contrib.auth.models import User
-from sleighmeapi.views.member import MemberSerializer
 from sleighmeapi.views.partner import PartnerSerializer
 
 
